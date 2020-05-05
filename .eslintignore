@@ -1,0 +1,7 @@
+.next
+client/.next
+out
+.idea
+node_modules
+bundles
+test
