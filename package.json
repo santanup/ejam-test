@@ -28,8 +28,9 @@
     "test": "yarn run lint && yarn run jest",
     "eslint": "eslint --ext .jsx --ext .js --fix --ignore-path .eslintignore .",
     "dev": "nodemon src/ --exec babel-node",
-    "start": "babel-node src/",
-    "jest": "jest  --forceExit"
+    "start": "cross-env NODE_ENV=production babel-node ./src/",
+    "jest": "jest  --forceExit",
+    "build": "next build ./client/"
   },
   "standard": {
     "env": [
@@ -58,6 +59,7 @@
     "compression": "^1.7.4",
     "cookie-storage": "^6.0.0",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
     "date-fns": "^2.4.1",
     "feathers-mongoose": "^8.3.0",
     "helmet": "^3.21.2",
